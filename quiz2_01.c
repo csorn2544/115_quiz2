@@ -1,32 +1,24 @@
 #include<stdio.h>
 int main()
 {
-    int n,i=2,j=0,k=0,ntemp;
+    int n,i=2,j=0,ntemp;
     scanf("%d",&n);
     ntemp=n;
+    if(n%5==0)
+    {
+        i=5;
+    }
     while(n!=1)
     {
-        printf("%d\n",i);
-        if(n%i==0)
+        while(n%i==0)
         {
-            n=n/i;
             j++;
-            if(j==3)
-            {
-                break;
-            }
-        }
-        if(n%i==1&&k==0)
-        {
-            j=1;
-            i++;
+            n=n/i;
         }
         if(n%i==1)
         {
-            j=1;
             i++;
         }
-        k++;
     }
     if(j!=3)
     {
