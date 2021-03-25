@@ -1,35 +1,39 @@
 #include<stdio.h>
 int main()
 {
-    int n,i=2,j=1,k=0,pos,d,ntemp;
+    int n,i=2,j=0,k=0,ntemp;
     scanf("%d",&n);
     ntemp=n;
     while(n!=1)
     {
+        printf("%d\n",i);
         if(n%i==0)
         {
+            n=n/i;
             j++;
             if(j==3)
             {
                 break;
             }
         }
-        else if(n%i==1&&k==0)
-        {
-            j=1;
-            i++;
-            n=ntemp;
-        }
-        else if(n%i==1)
+        if(n%i==1&&k==0)
         {
             j=1;
             i++;
         }
-        n=n/i;
+        if(n%i==1)
+        {
+            j=1;
+            i++;
+        }
         k++;
     }
     if(j!=3)
     {
+        if(ntemp==1)
+        {
+            ntemp=1;
+        }
         printf("%d",ntemp);
     }
     if(j>=3)
