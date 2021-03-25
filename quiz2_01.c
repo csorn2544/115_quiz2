@@ -10,23 +10,24 @@ int main()
     }
     while(n!=1)
     {
-        while(n%i==0)
+        if(n%i==0)
         {
             j++;
             n=n/i;
         }
-        if(n%i==1)
+        if(n%i==1&&n!=1)
         {
+            j=1;
             i++;
         }
     }
-    if(j!=3)
+    if(j<3)
     {
         if(ntemp==1)
         {
             ntemp=1;
         }
-        printf("%d",ntemp);
+        printf("%d\n",ntemp);
     }
     if(j>=3)
         printf("Not Cube Free");
