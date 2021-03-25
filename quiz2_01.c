@@ -27,7 +27,7 @@ int main()
         {
             ntemp=1;
         }
-        printf("%d\n",ntemp);
+        printf("%d",ntemp);
     }
     if(j>=3)
         printf("Not Cube Free");
